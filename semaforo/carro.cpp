@@ -1,28 +1,29 @@
-class Carro {
-private:
-	Pista pista;
-	int tamanho;
-public:
-	Carro(Pista pista, int tamanho) {
-		this->pista = pista;
-		this->tamanho = tamanho + 3;
-	}
-	~Carro();
+#include "carro.h"
 
-	int getTamanho() {
-		return tamanho;
-	}
+//função que gera um numero aleatorio onde n é o menor numero e (n+m-1) é o maior numero
+int Carro::getRandom(int m, int n) {
+	srand(clock());
+	int random = (rand() % m + n);
+	return random;
+}
 
-	void setTamanho(int tamanho) {
-		this->tamanho = tamanho;
-	}
+Carro::Carro(int tamanho) {
+	this->tamanho = tamanho + 3;
+}
 
-	Pista getPista() {
-		return Pista;
-	}
+Carro::Carro() {
 
-	void setTamanho(Pista pista) {
-		this->pista = pista;
-	}
+}
 
-};
+Carro::~Carro() {
+
+}
+
+int Carro::getTamanho() {
+	return tamanho;
+}
+
+void Carro::setTamanho(int tamanho) {
+	this->tamanho = tamanho;
+}
+

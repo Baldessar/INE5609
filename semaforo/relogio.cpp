@@ -4,18 +4,38 @@
  *  Created on: 28/04/2017
  *      Author: atalaia
  */
-#include <time.h>
+
 #include <stdlib.h>
-using namespace std;
+#include <iostream>
+#include <time.h>
+#include "relogio.h"
 
-class Relogio {
+Relogio::Relogio(int tempoDeSimulacao, int tempoSemaforo) {
+	this->tempoDeSimulacao = tempoDeSimulacao;
+	this->tempoSemaforo = tempoSemaforo;
+}
 
-public:
+int Relogio::getTempoTotal() {
+	return tempoTotal;
+}
 
-	//função que gera um numero aleatorio onde n é o menor numero e (n+m-1) é o maior numero
-	int getRandom(int m, int n) {
-		srand(clock());
-		int random = (rand() % m + n);
-		return random;
-	}
-};
+void Relogio::setTempoTotal(int tempoTotal) {
+	this->tempoTotal = tempoTotal;
+}
+
+int Relogio::getTempoDeSimulacao() {
+	return tempoDeSimulacao;
+}
+
+void Relogio::setTempoDeSimulacao(int tempoDeSimulacao) {
+	this->tempoDeSimulacao = tempoDeSimulacao;
+}
+
+int Relogio::getTempoSemaforo() {
+	return tempoSemaforo;
+}
+
+void Relogio::setTempoTotalSemaforo(int tempoSemaforo) {
+	this->tempoSemaforo = tempoSemaforo;
+}
+

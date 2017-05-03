@@ -21,16 +21,18 @@ void Semaforo::liberaProximo(int &aux) {
 			this->pista1->setLiberado(false);
 			this->pista2->setLiberado(false);
 			nextSemaforo->setAberto(true);
+			nextSemaforo->getPista1()->setLiberado(true);
+			nextSemaforo->getPista2()->setLiberado(true);
 			aux++;
 		}
 	}
 }
-
-void Semaforo::abrirSemaforo() {
-	nextSemaforo->setAberto(true);
-	nextSemaforo->getPista1()->setLiberado(true);
-	nextSemaforo->getPista2()->setLiberado(true);
-}
+//ESSA MERDA NAO FUNCIONA E EU N TENHO IDEIA DE O POR QUE!!
+//void Semaforo::abrirSemaforo() {
+//	nextSemaforo->setAberto(true);
+//	nextSemaforo->getPista1()->setLiberado(true);
+//	nextSemaforo->getPista2()->setLiberado(true);
+//}
 
 Relogio* Semaforo::getRelogio() {
 	return relogio;

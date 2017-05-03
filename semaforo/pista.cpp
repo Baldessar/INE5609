@@ -39,7 +39,7 @@ int Pista::excludeCar() {
 		fila->dequeue();
 		return 0;
 	}
-	Carro *carro = fila->back();
+	Carro *carro = fila->dequeue();
 	int direction = carro->getRandom(3, 0);
 	if (direction == 0 && frente->getTamanho() >= carro->getTamanho()) {
 		this->frente->insertCar(carro);
@@ -93,6 +93,12 @@ void Pista::setEsquerda(Pista* esquerda) {
 	this->esquerda = esquerda;
 }
 
+void Pista::setPistas(Pista* frente, Pista* direita, Pista* esquerda) {
+	this->frente = frente;
+	this->direita = direita;
+	this->esquerda = esquerda;
+}
+
 bool Pista::getFonte() {
 	return fonte;
 }
@@ -109,7 +115,7 @@ void Pista::setSumidouro(bool sumidouro) {
 	this->sumidouro = sumidouro;
 }
 
-bool Pista::getLiberado(){
+bool Pista::getLiberado() {
 	return liberada;
 }
 

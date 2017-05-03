@@ -67,6 +67,8 @@ public:
 
 	void setEsquerda(Pista* esquerda);
 
+	void setPistas(Pista* frente, Pista* direita, Pista* esquerda);
+
 	bool getFonte();
 
 	void setFonte(bool fonte);

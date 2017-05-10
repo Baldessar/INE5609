@@ -23,17 +23,22 @@ private:
 	LinkedQueue<Carro*> *fila;
 	int tamanho;
 	int velocidade;
+	int tempoEntrada;
 	Pista *frente;
 	Pista *direita;
 	Pista *esquerda;
 	bool fonte;
 	bool sumidouro;
 	bool liberada;
+	int pr;
+	int pd;
+	int pe;
 
 public:
 	Pista();
 
-	Pista(int tamanho, int velocidade, Pista *frente, Pista *direita,Pista *esquerda, bool fonte, bool sumidouro,bool liberada);
+	Pista(int tamanho, int velocidade, Pista *frente, Pista *direita,
+			Pista *esquerda, bool fonte, bool sumidouro, bool liberada);
 
 	~Pista();
 
@@ -80,8 +85,11 @@ public:
 	bool getLiberado();
 
 	void setLiberado(bool liberada);
+
+	int getTempoEntrada();
+
+	void setTempoEntrada(int tempoEntrada);
 };
 
 #endif /* PISTA_H_ */
-
 

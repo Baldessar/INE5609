@@ -13,8 +13,11 @@
 class Carro {
 private:
 	int tamanho;
+	int posicao;
 public:
-	int getRandom(int m, int n);
+	int randTamanho();
+
+	int getPista();
 
 	Carro(int tamanho);
 
@@ -25,6 +28,10 @@ public:
 	int getTamanho();
 
 	void setTamanho(int tamanho);
+
+	int getPosicao();
+
+	void setPosicao(int posicao);
 
 };
 

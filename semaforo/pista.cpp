@@ -40,7 +40,7 @@ int Pista::excludeCar() {
 		return 0;
 	}
 	Carro *carro = fila->dequeue();
-	int direction = carro->getRandom(3, 0);
+	int direction = carro->getPista(8, 1, 1);
 	if (direction == 0 && frente->getTamanho() >= carro->getTamanho()) {
 		this->frente->insertCar(carro);
 	} else if (direction == 1 && direita->getTamanho() >= carro->getTamanho()) {
@@ -123,3 +123,10 @@ void Pista::setLiberado(bool liberada) {
 	this->liberada = liberada;
 }
 
+int Pista::getTempoEntrada() {
+	return tempoEntrada;
+}
+
+void Pista::setTempoEntrada(int tempoEntrada) {
+	this->tempoEntrada = tempoEntrada;
+}
